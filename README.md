@@ -1,5 +1,8 @@
 # STA426_FS2020
 
-A [workflowr][] project.
+**Here, I will store my work for the course STA426@UZH.**
 
-[workflowr]: https://github.com/jdblischak/workflowr
+## guide: 
+    - EX: exercise
+    - PR: project
+    - JC: journal club

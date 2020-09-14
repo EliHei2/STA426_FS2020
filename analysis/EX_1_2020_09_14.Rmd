@@ -1,0 +1,46 @@
+---
+title: "STA426_FS2020: Exercise 1"
+author:
+- name: Elyas Heidari
+  affiliation: 
+  - &IMLS Institute for Molecular Life Sciences, University of Zurich, Switzerland
+  - Swiss Institute of Bioinformatics (SIB), University of Zurich, Switzerland
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output:
+  workflowr::wflow_html:
+    code_folding: hide
+    toc: true
+    toc_float: true
+    number_sections: false
+---
+
+<!-- 2020-09-14 11:40 -->
+<!-- elihei  [<eheidari@student.ethz.ch>]-->
+<!--/Volumes/Projects/STA426_FS2020/analysis/EX_1_2020_09_14.Rmd-->
+
+# Setup
+```{r setup, include = FALSE}
+library('BiocStyle')
+knitr::opts_chunk$set( autodep=TRUE, cache=TRUE, dev='png', cache.lazy = FALSE)
+# wflow_build(files='analysis/EX_1_2020_09_14.Rmd', view=F, verbose=T)
+```
+
+# Log-normal samples
+**Q:** Create an HTML document that samples 100 values from a log-normal distribution (say, `mu=1`, `sigma=.25`); create a histogram of the distribution and the distribution on the log scale; report the mean and variance of the sample in line in the text. In general, do not just dump the R code and plots in the HTML document; break your exercises into sections with headings, add some text and make it readable.
+
+**A:**
+
+```{r test1, message=FALSE, warning=FALSE, paged.print=FALSE}
+# sample from log-normal
+n          = 100
+ln_samples = rlnorm(n, meanlog=1, sdlog=0.25)
+ln_hist    = hist(ln_samples, xlab='value')
+ln_hist$counts = log(ln_hist$counts, 2)
+plot(ln_hist, xlab ='log value')
+summary(ln_samples)
+mean_s     = mean(ln_samples)
+var_s      = var(ln_samples)
+```
+The sample has mean `r mean_s` and variance `r var_s`.
+
+# Session info
