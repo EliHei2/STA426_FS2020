@@ -8,6 +8,6 @@
     - JC: journal club
 
 
-This ![link](https://medium.com/markdown-monster-blog/getting-images-into-markdown-documents-and-weblog-posts-with-markdown-monster-9ec6f353d8ec) instructs how to add photos to markdown:
+This [link](https://medium.com/markdown-monster-blog/getting-images-into-markdown-documents-and-weblog-posts-with-markdown-monster-9ec6f353d8ec) instructs how to add photos to markdown:
 
-![a sample image from scRNA-seq data is here.](/Volumes/Projects/STA426_FS2020/docs/figure/EX_1_2020_09_14.Rmd/graphs_all.pdf)
+[a sample image from scRNA-seq data is here.](/Volumes/Projects/STA426_FS2020/docs/figure/EX_1_2020_09_14.Rmd/graphs_all.png)
